@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1100px; /* Membatasi lebar maksimal */
+    margin: 0 auto; /* Untuk membuatnya terpusat */
+    height: auto; /* Auto height */
+}
+
+/*button*/
+.btn {
+    padding: 1rem 1rem;
+    background: rgb(200, 207, 207);
+    cursor: pointer;
+    border-radius: 4rem;
+    display: inline-block;
+    box-shadow: grey;
+    font-size: 0.7rem;
+    color: black;
+    letter-spacing: 0.1rem;
+    font-weight: 16px;
+    transition: 0.5s ease;
+}
+
+.btn :hover {
+    box-shadow: none;
+}
+
+
+/*title*/
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: gray;
+    position: relative;
+    padding-left:40px ;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 20px ;
+    height: 1px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+/*logo dan nav bar menu*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    transition: 0.2s ease-in-out;
+}
+
+.nav :hover{
+  color: rgb(122, 128, 128) ;
+
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 2rem ;
+}
+
+.logo a{
+    color: black;
+}
+
+nav ul li a {
+    color: black;
+}
+
+/*Home section*/
+#Home {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.home-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    color: black;
+}
+
+span{
+    color: rgb(122, 128, 128)
+}
+
+.home-right img {
+    width: 250px;
+    border-radius: 0.7rem;
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    padding-left: 3rem;
+    padding-bottom: 5rem;
+}
+
+/*About section*/
+#about {
+    background-color: rgb(200, 207, 207);
+    padding: 6rem 0;
+}
+
+.section-title-about {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+/*Layout*/
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.About {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: rgb(122, 128, 128);
+    border-radius: 0.7rem;
+}
+
+.About h4 {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.About p {
+    color: white;
+}
+
+.about-icon {
+    background-color:rgb(200, 207, 207) ;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+/*End of About*/
+
+/*Skills & Experience*/
+#skills {
+    padding: 6rem 0;
+    background: white;
+}
+
+.section-title-skills {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+.skills-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax (350px, 1fr));
+    gap: 3rem;
+}
+
+.experience {
+    display: flex;
+    gap: 2rem;
+}
+
+.experience line {
+    padding: 0 0.7rem;
+}
+
+.experience .line div {
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.experience-info {
+    margin: 0.3rem 0;
+}
+
+.experience-date {
+    margin-bottom: 2rem;
+}
+
+.experience .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+/*End of Skills & Experience*/
+
+/* Contact Section */
+#contact {
+    padding: var(--sectionPadding);
+  }
+  
+  .contact {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+  }
+  
+  .contact-form div {
+    margin-bottom: 1.4rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: rgb(200, 207, 207);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    resize: none;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #9d9fa1;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out; /* Perlu ditambahkan 's' pada 0.2 untuk waktu transisi */
+}
+
+.btn-submit:hover {
+    background-color: rgb(200, 207, 207);
+    color: rgb(122, 128, 128)r;
+}
+  
+  /* Contact Section - Right Side */
+  .contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .contact-item-icon {
+    background: var(--thirdBackgroundColor);
+    /* padding: 0.8rem 1rem; */
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-item-icon svg {
+    fill: var(--primaryIconColor);
+  }
+  
+  .contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Footer Section */
+footer {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+  }
+  
+  .footer-icons {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-icons a {
+    margin: 0 0.5rem;
+  }
+  
+  .footer-icons svg {
+    fill: #3e3f40;
+  }
+  
+  .footer-icons a:hover svg {
+    fill: #000;
+  }
+
+  /*Breakpoints*/
+  @media (max-width: 1200px){
+    html {
+        font-size: 65%;
+    }
+  }
+
+  @media(max-width: 991px){
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2 rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+  }
